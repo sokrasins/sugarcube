@@ -53,7 +53,7 @@ static int app_topics_subscribe(void)
 		{
 			.topic.utf8 = MY_CUSTOM_TOPIC_1,
 			.topic.size = sizeof(MY_CUSTOM_TOPIC_1) - 1,
-			.qos = MQTT_QOS_1_AT_LEAST_ONCE,
+			.qos = MQTT_QOS_0_AT_MOST_ONCE,
 		}
 	};
 
@@ -96,13 +96,10 @@ static int aws_iot_client_init(void)
 static void connect_work_fn(struct k_work *work)
 {
 	int err;
-	//const struct aws_iot_config config = {
-	//	.client_id = hw_id,
-	//};
 
 	LOG_INF("Connecting to AWS IoT");
 
-	err = aws_iot_connect(NULL);//&config);
+	err = aws_iot_connect(NULL);
 	if (err == -EAGAIN) {
 		LOG_INF("Connection attempt timed out, "
 			"Next connection retry in %d seconds",
@@ -138,7 +135,6 @@ static void on_aws_iot_evt_connected(const struct aws_iot_evt *const evt)
 
 static void on_aws_iot_evt_disconnected(void)
 {
-	//(void)k_work_cancel_delayable(&shadow_update_work);
 	(void)k_work_reschedule(&connect_work, K_SECONDS(5));
 }
 
@@ -324,16 +320,6 @@ int main(void)
 		FATAL_ERROR();
 		return err;
 	}
-
-	/* Resend connection status if the sample is built for QEMU x86.
-	 * This is necessary because the network interface is automatically brought up
-	 * at SYS_INIT() before main() is called.
-	 * This means that NET_EVENT_L4_CONNECTED fires before the
-	 * appropriate handler l4_event_handler() is registered.
-	 */
-	//if (IS_ENABLED(CONFIG_BOARD_NATIVE_SIM)) {
-	//	conn_mgr_mon_resend_status();
-	//}
 
 	return 0;
 }
