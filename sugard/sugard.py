@@ -20,7 +20,6 @@ try:
 except ImportError:
     pass
 
-cred_path = "creds/"
 endpoint = "a3tnwpx5rjol8f-ats.iot.us-east-1.amazonaws.com"
 client_id = "glucoseSource"
 topic = "glucose/value"
@@ -28,10 +27,6 @@ poll_period = 1  # minutes
 max_pub_period = 15  # minutes
 pub_thresh = 10  # percent
 keepalive = 20 * 60  # max allowed
-
-cert_path = cred_path + "data_server.cert.pem"
-ca_path = cred_path + "root-CA.crt"
-key_path = cred_path + "data_server.private.key"
 
 last_val = None
 
@@ -94,6 +89,16 @@ def on_connection_closed(connection, callback_data):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        log.error("ERROR: Required argument, must provide path to credentials folder")
+        sys.exit(-1)
+
+    # Set paths to required credentials
+    cred_path = sys.argv[1]
+    cert_path = cred_path + "data_server.cert.pem"
+    ca_path = cred_path + "root-CA.crt"
+    key_path = cred_path + "data_server.private.key"
+
     # Create a MQTT connection from the command line data
     mqtt_connection = mqtt_connection_builder.mtls_from_path(
         endpoint=endpoint,

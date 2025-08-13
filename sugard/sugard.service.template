@@ -7,5 +7,5 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-User=
-ExecStart=/usr/bin/env python /home/sok/sugard/sugard.py
+User=%%USER%%
+ExecStart=/usr/bin/env python %%PATH%%/sugard.py %%PATH%%/creds/
