@@ -8,4 +8,4 @@ Type=simple
 Restart=always
 RestartSec=1
 User=%%USER%%
-ExecStart=/usr/bin/env python %%PATH%%/sugard.py %%PATH%%/creds/
+ExecStart=/usr/bin/env python3 %%PATH%%/sugard.py %%PATH%%/creds/
