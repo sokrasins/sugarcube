@@ -1,0 +1,11 @@
+[Unit]
+Description=Tidepool CGM API to MQTT
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=
+ExecStart=/usr/bin/env python /home/sok/sugard/sugard.py
