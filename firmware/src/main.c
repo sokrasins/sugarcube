@@ -17,6 +17,8 @@
 #include <hw_id.h>
 #include <modem/modem_info.h>
 
+#include <zephyr/drivers/pwm.h>
+
 /* Register log module */
 LOG_MODULE_REGISTER(aws_iot_sample, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 
@@ -37,12 +39,18 @@ LOG_MODULE_REGISTER(aws_iot_sample, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 static struct net_mgmt_event_callback l4_cb;
 static struct net_mgmt_event_callback conn_cb;
 
+static const struct pwm_dt_spec ledr = PWM_DT_SPEC_GET(DT_NODELABEL(pwm_led0));
+static const struct pwm_dt_spec ledg = PWM_DT_SPEC_GET(DT_NODELABEL(pwm_led1));
+static const struct pwm_dt_spec ledb = PWM_DT_SPEC_GET(DT_NODELABEL(pwm_led2));
+
 /* Forward declarations. */
 static void connect_work_fn(struct k_work *work);
 static void aws_iot_event_handler(const struct aws_iot_evt *const evt);
 
 /* Work items used to control some aspects of the sample. */
 static K_WORK_DELAYABLE_DEFINE(connect_work, connect_work_fn);
+
+void set_led(const struct pwm_dt_spec *spec, uint8_t val);
 
 /* Static functions */
 
@@ -215,6 +223,18 @@ static void aws_iot_event_handler(const struct aws_iot_evt *const evt)
 									 evt->data.msg.ptr,
 									 evt->data.msg.topic.len,
 									 evt->data.msg.topic.str);
+
+		bool ready = pwm_is_ready_dt(&ledr);
+		ready &= pwm_is_ready_dt(&ledg);
+		ready &= pwm_is_ready_dt(&ledb);
+		if (ready)
+		{
+			LOG_INF("Setting LED color");
+			set_led(&ledr, 128);
+			set_led(&ledg, 128);
+			set_led(&ledb, 128);
+		}
+
 		break;
 	case AWS_IOT_EVT_PUBACK:
 		LOG_INF("AWS_IOT_EVT_PUBACK, message ID: %d", evt->data.message_id);
@@ -322,4 +342,10 @@ int main(void)
 	}
 
 	return 0;
+}
+
+void set_led(const struct pwm_dt_spec *spec, uint8_t val)
+{
+	uint32_t nanosec = 8 * 1000 * 1000 * val / 255;
+	pwm_set_pulse_dt(spec, nanosec);
 }
