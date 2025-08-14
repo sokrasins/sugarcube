@@ -148,7 +148,7 @@ if __name__ == "__main__":
                     log.info("    --> Publishing to '{}': {}".format(topic, message))
                     message_json = json.dumps(message)
                     mqtt_connection.publish(
-                        topic=topic, payload=message_json, qos=mqtt.QoS.AT_LEAST_ONCE
+                        topic=topic, payload=message_json, qos=mqtt.QoS.AT_LEAST_ONCE, retain=True
                     )
                     last_val = val
             else:

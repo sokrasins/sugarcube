@@ -17,7 +17,7 @@
 #include <hw_id.h>
 #include <modem/modem_info.h>
 
-#include <zephyr/drivers/pwm.h>
+#include "led.h"
 
 /* Register log module */
 LOG_MODULE_REGISTER(aws_iot_sample, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
@@ -39,9 +39,6 @@ LOG_MODULE_REGISTER(aws_iot_sample, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 static struct net_mgmt_event_callback l4_cb;
 static struct net_mgmt_event_callback conn_cb;
 
-static const struct pwm_dt_spec ledr = PWM_DT_SPEC_GET(DT_NODELABEL(pwm_led0));
-static const struct pwm_dt_spec ledg = PWM_DT_SPEC_GET(DT_NODELABEL(pwm_led1));
-static const struct pwm_dt_spec ledb = PWM_DT_SPEC_GET(DT_NODELABEL(pwm_led2));
 
 /* Forward declarations. */
 static void connect_work_fn(struct k_work *work);
@@ -50,7 +47,9 @@ static void aws_iot_event_handler(const struct aws_iot_evt *const evt);
 /* Work items used to control some aspects of the sample. */
 static K_WORK_DELAYABLE_DEFINE(connect_work, connect_work_fn);
 
-void set_led(const struct pwm_dt_spec *spec, uint8_t val);
+int color_from_glucose(int g, color_t *c);
+
+led_handle_t led = NULL;
 
 /* Static functions */
 
@@ -224,15 +223,12 @@ static void aws_iot_event_handler(const struct aws_iot_evt *const evt)
 									 evt->data.msg.topic.len,
 									 evt->data.msg.topic.str);
 
-		bool ready = pwm_is_ready_dt(&ledr);
-		ready &= pwm_is_ready_dt(&ledg);
-		ready &= pwm_is_ready_dt(&ledb);
-		if (ready)
+		LOG_INF("Setting LED color");
+		if (led != NULL)
 		{
-			LOG_INF("Setting LED color");
-			set_led(&ledr, 128);
-			set_led(&ledg, 128);
-			set_led(&ledb, 128);
+			color_t c;
+			color_from_glucose(275, &c);
+			led_color_set(led, &c);
 		}
 
 		break;
@@ -307,6 +303,8 @@ int main(void)
 
 	int err;
 
+	led = led_init(LED_1);
+
 	/* Setup handler for Zephyr NET Connection Manager events. */
 	net_mgmt_init_event_callback(&l4_cb, l4_event_handler, L4_EVENT_MASK);
 	net_mgmt_add_event_callback(&l4_cb);
@@ -344,8 +342,48 @@ int main(void)
 	return 0;
 }
 
-void set_led(const struct pwm_dt_spec *spec, uint8_t val)
+int color_from_glucose(int g, color_t *c) 
 {
-	uint32_t nanosec = 8 * 1000 * 1000 * val / 255;
-	pwm_set_pulse_dt(spec, nanosec);
+    if (g < 0)
+	{
+		return -1;
+	}       
+	else if (g < 55)
+	{
+		memcpy(c, &COLOR_RED, sizeof(COLOR_RED));
+	}
+	else if (g < 152)
+	{
+		color_interp(
+			&COLOR_RED, 
+			&COLOR_GREEN, 
+			((float)(g-55.0f))/(152.0f-55.0f), 
+			c
+		);
+	}
+	else if (g < 250)
+	{
+		color_interp(
+			&COLOR_GREEN, 
+			&COLOR_BLUE, 
+			((float)(g-152.0f))/(250.0f-152.0f), 
+			c
+		);
+	}
+	else if (g < 300)
+	{
+		color_interp(
+			&COLOR_BLUE, 
+			&COLOR_PURPLE, 
+			((float)(g-250.0f))/(300.0f-250.0f), 
+			c
+		);
+	}
+	else
+	{
+		memcpy(c, &COLOR_PURPLE, sizeof(COLOR_PURPLE));
+	}
+
+	return 0;
 }
+

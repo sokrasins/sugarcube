@@ -17,5 +17,6 @@ echo "Updating systemctl"
 sudo systemctl daemon-reload
 
 echo "Starting sugard"
+sudo systemctl enable sugard
 sudo systemctl start sugard
 sudo systemctl status sugard
