@@ -144,11 +144,19 @@ if __name__ == "__main__":
                 )
 
                 if publish:
-                    message = f'{{"value": {round(val)}, "timestamp": {timestamp.isoformat()}}}'
-                    log.info("    --> Publishing to '{}': {}".format(topic, message))
+                    message = {}
+                    message["value"] = round(val)
+                    message["timestamp"] = timestamp.isoformat()
                     message_json = json.dumps(message)
+
+                    log.info(
+                        "    --> Publishing to '{}': {}".format(topic, message_json)
+                    )
                     mqtt_connection.publish(
-                        topic=topic, payload=message_json, qos=mqtt.QoS.AT_LEAST_ONCE, retain=True
+                        topic=topic,
+                        payload=message_json,
+                        qos=mqtt.QoS.AT_LEAST_ONCE,
+                        retain=True,
                     )
                     last_val = val
             else:

@@ -21,12 +21,15 @@ led_handle_t led_init(led_t led)
 {
     if (led == LED_1)
     {
-        return (led_handle_t)&(rgb_led);
-    }
+        bool ready = pwm_is_ready_dt(&rgb_led.pwm_r);
+	    ready &= pwm_is_ready_dt(&rgb_led.pwm_g);
+	    ready &= pwm_is_ready_dt(&rgb_led.pwm_b);
 
-    //bool ready = pwm_is_ready_dt(&ledr);
-	//ready &= pwm_is_ready_dt(&ledg);
-	//ready &= pwm_is_ready_dt(&ledb);
+        if (ready)
+        {
+            return (led_handle_t)&(rgb_led);
+        }
+    }
 
     return NULL;
 }
