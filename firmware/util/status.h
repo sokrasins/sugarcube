@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-typedef int32_t status_t
+typedef int32_t status_t;
 
 #define STATUS_OK 0
 #define STATUS_ERR -1

@@ -11,7 +11,9 @@
 			"mcuboot.h": "c",
 			"conn_mgr_monitor.h": "c",
 			"pwm.h": "c",
-			"led.h": "c"
+			"led.h": "c",
+			"modem_info.h": "c",
+			"log.h": "c"
 		}
 	}
 }
