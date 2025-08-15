@@ -12,6 +12,6 @@ typedef void *led_handle_t;
 
 led_handle_t led_init(led_t led);
 
-void led_color_set(led_handle_t handle, color_t *color);
+void led_color_set(led_handle_t handle, const color_t *color);
 
 #endif /*LED_H_*/

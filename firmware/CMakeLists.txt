@@ -12,6 +12,8 @@ project(aws_iot)
 target_sources(app PRIVATE src/main.c)
 target_sources(app PRIVATE led/led.c)
 target_sources(app PRIVATE led/color.c)
+target_sources(app PRIVATE msg/glucose_msg.c)
 
 zephyr_include_directories(src)
 zephyr_include_directories(led)
+zephyr_include_directories(msg)

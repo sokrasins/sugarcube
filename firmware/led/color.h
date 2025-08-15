@@ -11,9 +11,9 @@ typedef struct {
 static const color_t COLOR_RED    = { 1.0, 0.0, 0.0 };
 static const color_t COLOR_YELLOW = { 1.0, 1.0, 0.0 };
 static const color_t COLOR_GREEN  = { 0.0, 1.0, 0.0 };
-static const color_t COLOR_PURPLE = { 0.0, 1.0, 1.0 };
+static const color_t COLOR_CYAN   = { 0.0, 1.0, 1.0 };
 static const color_t COLOR_BLUE   = { 0.0, 0.0, 1.0 };
-static const color_t COLOR_CYAN   = { 1.0, 0.0, 1.0 };
+static const color_t COLOR_PURPLE = { 1.0, 0.0, 1.0 };
 static const color_t COLOR_WHITE  = { 1.0, 1.0, 1.0 };
 static const color_t COLOR_BLACK  = { 0.0, 0.0, 0.0 };
 

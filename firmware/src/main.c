@@ -18,6 +18,7 @@
 #include <modem/modem_info.h>
 
 #include "led.h"
+#include "msg.h"
 
 /* Register log module */
 LOG_MODULE_REGISTER(aws_iot_sample, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
@@ -38,7 +39,6 @@ LOG_MODULE_REGISTER(aws_iot_sample, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 /* Zephyr NET management event callback structures. */
 static struct net_mgmt_event_callback l4_cb;
 static struct net_mgmt_event_callback conn_cb;
-
 
 /* Forward declarations. */
 static void connect_work_fn(struct k_work *work);
@@ -226,9 +226,19 @@ static void aws_iot_event_handler(const struct aws_iot_evt *const evt)
 		LOG_INF("Setting LED color");
 		if (led != NULL)
 		{
+			int glucose = 0;
 			color_t c;
-			color_from_glucose(275, &c);
-			led_color_set(led, &c);
+			int64_t rc = msg_glucose_decode(
+				evt->data.msg.ptr,
+				evt->data.msg.len, 
+				&glucose
+			);
+
+			if (rc >0)
+			{
+				color_from_glucose(glucose, &c);
+				led_color_set(led, &c);
+			}
 		}
 
 		break;
@@ -304,6 +314,7 @@ int main(void)
 	int err;
 
 	led = led_init(LED_1);
+	led_color_set(led, &COLOR_WHITE);
 
 	/* Setup handler for Zephyr NET Connection Manager events. */
 	net_mgmt_init_event_callback(&l4_cb, l4_event_handler, L4_EVENT_MASK);

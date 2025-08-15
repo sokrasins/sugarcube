@@ -31,7 +31,7 @@ led_handle_t led_init(led_t led)
     return NULL;
 }
 
-void led_color_set(led_handle_t handle, color_t *color)
+void led_color_set(led_handle_t handle, const color_t *color)
 {
     led_ctx_t *ctx = (led_ctx_t *)handle;
     
