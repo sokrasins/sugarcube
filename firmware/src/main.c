@@ -18,7 +18,7 @@
 LOG_MODULE_REGISTER(sugarcube, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 
 // Blood glucose helpers to convert bg to color
-#define BG_SCALE(g, low, high) (((float)(g - low))/(low - high))
+#define BG_SCALE(g, low, high) (((float)(g - low))/(high - low))
 
 // Map between BG and LED color
 #define BG_VLOW_VALUE	55
@@ -35,6 +35,7 @@ LOG_MODULE_REGISTER(sugarcube, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 
 
 static int bg_to_color(int g, color_t *c);
+void test_led(led_handle_t led);
 
 // Callbacks
 static void on_glucose(int glucose);
@@ -62,6 +63,7 @@ int main(void)
 	int err;
 
 	led = led_init(LED_1);
+	test_led(led);
 	led_color_set(led, &COLOR_WHITE);
 
 	// Enable connectivity
@@ -123,7 +125,7 @@ int bg_to_color(int g, color_t *c)
 	else
 	{
 		// Very high
-		memcpy(c, &BG_HIGH_COLOR, sizeof(COLOR_PURPLE));
+		memcpy(c, &BG_HIGH_COLOR, sizeof(BG_HIGH_COLOR));
 	}
 
 	return 0;
@@ -134,8 +136,18 @@ void on_glucose(int glucose)
 	color_t c;
 	if (led != NULL)
 	{
-		LOG_INF("Setting LED color");
 		bg_to_color(glucose, &c);
 		led_color_set(led, &c);
+	}
+}
+
+void test_led(led_handle_t led)
+{
+	color_t c;
+	for (int g=0; g<350; g+=10)
+	{
+		bg_to_color(g, &c);
+		led_color_set(led, &c);
+		k_msleep(100);
 	}
 }
