@@ -9,7 +9,7 @@
 
 LOG_MODULE_REGISTER(mqtt_client, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 
-/* Application specific topics. */
+// Application specific topics
 #define MY_CUSTOM_TOPIC_1 "glucose/value"
 
 static void aws_iot_event_handler(const struct aws_iot_evt *const evt);
@@ -20,7 +20,7 @@ static void on_aws_iot_evt_connected(const struct aws_iot_evt *const evt);
 
 static void connect_work_fn(struct k_work *work);
 
-/* Work items used to control some aspects of the sample. */
+// Work items used to control some aspects of the sample
 static K_WORK_DELAYABLE_DEFINE(connect_work, connect_work_fn);
 
 static glucose_cb_t _cb = NULL;
@@ -67,27 +67,9 @@ static void aws_iot_event_handler(const struct aws_iot_evt *const evt)
 	case AWS_IOT_EVT_PINGRESP:
 		LOG_INF("AWS_IOT_EVT_PINGRESP");
 		break;
-	//case AWS_IOT_EVT_FOTA_START:
-	//	LOG_INF("AWS_IOT_EVT_FOTA_START");
-	//	break;
-	//case AWS_IOT_EVT_FOTA_ERASE_PENDING:
-	//	LOG_INF("AWS_IOT_EVT_FOTA_ERASE_PENDING");
-	//	break;
-	//case AWS_IOT_EVT_FOTA_ERASE_DONE:
-	//	LOG_INF("AWS_FOTA_EVT_ERASE_DONE");
-	//	break;
-	//case AWS_IOT_EVT_FOTA_DONE:
-	//	LOG_INF("AWS_IOT_EVT_FOTA_DONE");
-	//	break;
-	//case AWS_IOT_EVT_FOTA_DL_PROGRESS:
-	//	LOG_INF("AWS_IOT_EVT_FOTA_DL_PROGRESS, (%d%%)", evt->data.fota_progress);
-	//	break;
 	case AWS_IOT_EVT_ERROR:
 		LOG_INF("AWS_IOT_EVT_ERROR, %d", evt->data.err);
 		FATAL_ERROR();
-		break;
-	case AWS_IOT_EVT_FOTA_ERROR:
-		LOG_INF("AWS_IOT_EVT_FOTA_ERROR");
 		break;
 	default:
 		LOG_WRN("Unknown AWS IoT event type: %d", evt->type);
@@ -116,21 +98,20 @@ static int app_topics_subscribe(void)
 	return 0;
 }
 
-/* Functions that are executed on specific connection-related events. */
+// Functions that are executed on specific connection-related events
 
 static void on_aws_iot_evt_connected(const struct aws_iot_evt *const evt)
 {
 	(void)k_work_cancel_delayable(&connect_work);
 
-	/* If persistent session is enabled, the AWS IoT library will not subscribe to any topics.
-	 * Topics from the last session will be used.
-	 */
+	// If persistent session is enabled, the AWS IoT library will not subscribe to any topics.
+	// Topics from the last session will be used.
 	if (evt->data.persistent_session) {
 		LOG_WRN("Persistent session is enabled, using subscriptions "
 			"from the previous session");
 	}
 
-	/* Mark image as working to avoid reverting to the former image after a reboot. */
+	// Mark image as working to avoid reverting to the former image after a reboot
 #if defined(CONFIG_BOOTLOADER_MCUBOOT)
 	boot_write_img_confirmed();
 #endif
@@ -174,9 +155,8 @@ int mqtt_appclient_init(void)
 		return err;
 	}
 
-	/* Add application specific non-shadow topics to the AWS IoT library.
-	 * These topics will be subscribed to when connecting to the broker.
-	 */
+	// Add application specific non-shadow topics to the AWS IoT library.
+	// These topics will be subscribed to when connecting to the broker.
 	err = app_topics_subscribe();
 	if (err) {
 		LOG_ERR("Adding application specific topics failed, error: %d", err);

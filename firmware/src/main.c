@@ -33,7 +33,7 @@ LOG_MODULE_REGISTER(sugarcube, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 #define BG_HIGH_VALUE	300
 #define BG_HIGH_COLOR	COLOR_PURPLE
 
-// 
+
 static int bg_to_color(int g, color_t *c);
 
 // Callbacks

@@ -6,14 +6,14 @@
 #include <zephyr/net/conn_mgr_monitor.h>
 #include <zephyr/logging/log.h>
 
-/* Register log module */
+// Register log module
 LOG_MODULE_REGISTER(network, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 
-/* Macros used to subscribe to specific Zephyr NET management events. */
+// Macros used to subscribe to specific Zephyr NET management events
 #define L4_EVENT_MASK (NET_EVENT_L4_CONNECTED | NET_EVENT_L4_DISCONNECTED)
 #define CONN_LAYER_EVENT_MASK (NET_EVENT_CONN_IF_FATAL_ERROR)
 
-/* Zephyr NET management event callback structures. */
+// Zephyr NET management event callback structures
 static struct net_mgmt_event_callback l4_cb;
 static struct net_mgmt_event_callback conn_cb;
 
@@ -39,7 +39,7 @@ static void l4_event_handler(struct net_mgmt_event_callback *cb,
         }
 		break;
 	default:
-		/* Don't care */
+		// Don't care
 		return;
 	}
 }
@@ -59,11 +59,11 @@ int network_init(void)
 {
     int err = 0;
 
-    /* Setup handler for Zephyr NET Connection Manager events. */
+    // Setup handler for Zephyr NET Connection Manager events
 	net_mgmt_init_event_callback(&l4_cb, l4_event_handler, L4_EVENT_MASK);
 	net_mgmt_add_event_callback(&l4_cb);
 
-	/* Setup handler for Zephyr NET Connection Manager Connectivity layer. */
+	// Setup handler for Zephyr NET Connection Manager Connectivity layer
 	net_mgmt_init_event_callback(&conn_cb, connectivity_event_handler, CONN_LAYER_EVENT_MASK);
 	net_mgmt_add_event_callback(&conn_cb);
 
