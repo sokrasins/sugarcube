@@ -23,7 +23,7 @@ static void connect_work_fn(struct k_work *work);
 /* Work items used to control some aspects of the sample. */
 static K_WORK_DELAYABLE_DEFINE(connect_work, connect_work_fn);
 
-glucose_cb_t _cb = NULL;
+static glucose_cb_t _cb = NULL;
 
 static void aws_iot_event_handler(const struct aws_iot_evt *const evt)
 {
