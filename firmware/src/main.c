@@ -44,6 +44,32 @@ static void net_evt_cb(net_evt_t evt, void *ctx);
 // LED handle
 static led_handle_t led = NULL;
 
+int main(void)
+{
+	int err;
+
+	led = led_init(LED_1);
+	test_led(led);
+	led_color_set(led, &COLOR_WHITE);
+
+	// Enable connectivity
+	LOG_INF("Bringing network interface up and connecting to the network");
+	network_cb_reg(net_evt_cb);
+	network_init();
+
+	// Connect to AWS IOT server
+	err = mqtt_appclient_init();
+	if (err) {
+		LOG_ERR("mqtt_client_init, error: %d", err);
+		FATAL_ERROR();
+		return err;
+	}
+
+	mqtt_appclient_reg_glucose_cb(on_glucose);
+
+	return 0;
+}
+
 void net_evt_cb(net_evt_t evt, void *ctx)
 {
 	switch (evt)
@@ -58,29 +84,14 @@ void net_evt_cb(net_evt_t evt, void *ctx)
 	}
 }
 
-int main(void)
+void on_glucose(int glucose)
 {
-	int err;
-
-	led = led_init(LED_1);
-	test_led(led);
-	led_color_set(led, &COLOR_WHITE);
-
-	// Enable connectivity
-	LOG_INF("Bringing network interface up and connecting to the network");
-	network_cb_reg(net_evt_cb);
-	network_init();
-
-	err = mqtt_appclient_init();
-	if (err) {
-		LOG_ERR("mqtt_client_init, error: %d", err);
-		FATAL_ERROR();
-		return err;
+	color_t c;
+	if (led != NULL)
+	{
+		bg_to_color(glucose, &c);
+		led_color_set(led, &c);
 	}
-
-	mqtt_appclient_reg_glucose_cb(on_glucose);
-
-	return 0;
 }
 
 int bg_to_color(int g, color_t *c) 
@@ -129,16 +140,6 @@ int bg_to_color(int g, color_t *c)
 	}
 
 	return 0;
-}
-
-void on_glucose(int glucose)
-{
-	color_t c;
-	if (led != NULL)
-	{
-		bg_to_color(glucose, &c);
-		led_color_set(led, &c);
-	}
 }
 
 void test_led(led_handle_t led)

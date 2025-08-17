@@ -7,6 +7,8 @@
 
 LOG_MODULE_REGISTER(LED, CONFIG_AWS_IOT_SAMPLE_LOG_LEVEL);
 
+static color_t _last_color;
+
 typedef struct {
     struct pwm_dt_spec pwm_r;
     struct pwm_dt_spec pwm_g;
@@ -41,6 +43,7 @@ led_handle_t led_init(led_t led)
 void led_color_set(led_handle_t handle, const color_t *color)
 {
     led_ctx_t *ctx = (led_ctx_t *)handle;
+    memcpy(&_last_color, color, sizeof(color_t));
     LOG_INF("Changing color");
     pwm_set_pulse_dt(&ctx->pwm_r, (int)(ctx->period * color->r));
     pwm_set_pulse_dt(&ctx->pwm_g, (int)(ctx->period * color->g));
