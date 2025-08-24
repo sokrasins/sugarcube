@@ -272,6 +272,13 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "line_style": 1,
+        "name": "50 Ohm",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)"
       }
     ],
     "meta": {
@@ -279,7 +286,16 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "50 Ohm",
+        "pattern": "/9151/ANT"
+      },
+      {
+        "netclass": "50 Ohm",
+        "pattern": "/9151/RF"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
