@@ -2337,6 +2337,19 @@
 		)
 		(uuid "4133f82f-a965-4f03-b0fd-98a1ecfa5dd1")
 	)
+	(text "TODO: Change to smaller devices"
+		(exclude_from_sim no)
+		(at 228.854 88.138 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+				(thickness 0.4064)
+				(bold yes)
+				(color 255 0 255 1)
+			)
+		)
+		(uuid "4f01d9af-9d2c-4a78-99ce-6e0c1ac1c73d")
+	)
 	(text "ePaper Display"
 		(exclude_from_sim no)
 		(at 90.678 17.526 0)
