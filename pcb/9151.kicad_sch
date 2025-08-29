@@ -3736,6 +3736,17 @@
 		)
 		(uuid "318d2aaa-916f-4553-a537-4ae9f3fec10c")
 	)
+	(text "Internal pull-ups \nare good to 100kHz"
+		(exclude_from_sim no)
+		(at 203.708 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 3 0 255 1)
+			)
+		)
+		(uuid "7cd30b21-50ca-4bf6-bf50-ae972a5ed1d8")
+	)
 	(text "Flash"
 		(exclude_from_sim no)
 		(at 239.014 16.764 0)
@@ -3749,26 +3760,13 @@
 		)
 		(uuid "aa8c267d-ccff-422a-a756-b11f71419e5f")
 	)
-	(text "TODO: Can internal \npullups do this?"
-		(exclude_from_sim no)
-		(at 200.914 150.622 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.254)
-				(bold yes)
-				(color 255 0 248 1)
-			)
-		)
-		(uuid "b55e0dbf-4bf3-4398-a396-d1f3a15bc303")
-	)
 	(text "RFFE ITF"
 		(exclude_from_sim no)
 		(at 139.192 145.034 90)
 		(effects
 			(font
 				(size 1.27 1.27)
-				(color 255 0 235 1)
+				(color 7 0 255 1)
 			)
 		)
 		(uuid "d0a03d59-fa0b-4f70-be43-c50adc70ddcc")
@@ -5640,7 +5638,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 155.9052 163.83 0)
 			(effects
 				(font
@@ -5710,7 +5708,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 212.852 135.89 90)
 			(effects
 				(font
@@ -5780,7 +5778,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 141.9352 35.56 0)
 			(effects
 				(font
@@ -6048,7 +6046,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 254.9652 54.61 0)
 			(effects
 				(font
@@ -6184,7 +6182,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 116.5352 38.1 0)
 			(effects
 				(font
@@ -6254,7 +6252,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 141.9352 64.77 0)
 			(effects
 				(font
@@ -6322,7 +6320,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
 			(at 67.31 28.448 90)
 			(effects
 				(font
@@ -6458,7 +6456,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 193.802 135.89 90)
 			(effects
 				(font
@@ -6726,7 +6724,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 91.1352 35.56 0)
 			(effects
 				(font
@@ -6796,7 +6794,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 73.152 33.02 90)
 			(effects
 				(font
@@ -7268,7 +7266,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 205.232 46.99 90)
 			(effects
 				(font
@@ -7336,7 +7334,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Card:nanoSIM_GCT_SIM8060-6-0-14-00"
 			(at 41.91 165.1 0)
 			(effects
 				(font
@@ -7484,7 +7482,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 59.3852 35.56 0)
 			(effects
 				(font
@@ -7686,7 +7684,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 35.2552 35.56 0)
 			(effects
 				(font
@@ -8035,7 +8033,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 46.6852 35.56 0)
 			(effects
 				(font
@@ -8170,7 +8168,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 209.042 46.99 90)
 			(effects
 				(font
@@ -8372,7 +8370,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 130.5052 35.56 0)
 			(effects
 				(font
@@ -8508,7 +8506,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical"
 			(at 151.13 76.2 0)
 			(effects
 				(font
