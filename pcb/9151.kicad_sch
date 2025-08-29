@@ -627,6 +627,148 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -3688,7 +3830,7 @@
 	)
 	(text "CHECK"
 		(exclude_from_sim no)
-		(at 46.482 64.262 0)
+		(at 55.372 60.452 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4643,16 +4785,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 63.5) (xy 71.12 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d5878f4-afbb-4368-a97a-f3e876972dcb")
-	)
-	(wire
-		(pts
 			(xy 207.01 62.23) (xy 228.6 62.23)
 		)
 		(stroke
@@ -4660,6 +4792,16 @@
 			(type default)
 		)
 		(uuid "a4c78c40-a302-4621-bbac-d71a86041ad9")
+	)
+	(wire
+		(pts
+			(xy 58.42 35.56) (xy 58.42 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab27d03d-e419-4736-a78f-6341b4ef8b63")
 	)
 	(wire
 		(pts
@@ -4793,6 +4935,26 @@
 	)
 	(wire
 		(pts
+			(xy 40.64 66.04) (xy 71.12 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d40c5b74-fa26-4b59-80dc-38c559fe5107")
+	)
+	(wire
+		(pts
+			(xy 40.64 63.5) (xy 71.12 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4c52924-0921-48f2-8e77-47bfeef015d0")
+	)
+	(wire
+		(pts
 			(xy 68.58 129.54) (xy 71.12 129.54)
 		)
 		(stroke
@@ -4880,26 +5042,6 @@
 			(type default)
 		)
 		(uuid "e53be230-e7f3-4ca6-8ef9-b44503f1edeb")
-	)
-	(wire
-		(pts
-			(xy 58.42 35.56) (xy 58.42 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e554131d-3a71-4a63-ade9-b893df7f79c6")
-	)
-	(wire
-		(pts
-			(xy 50.8 66.04) (xy 71.12 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e94a982e-f0ea-4983-bf79-b881a80a5a77")
 	)
 	(wire
 		(pts
@@ -7234,6 +7376,74 @@
 			(project "sugarcube"
 				(path "/e4766f3c-98ec-4040-9e57-7309e9dd2214/3c6e67a3-a459-411e-b958-c3a826ee49dc"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 35.56 66.04 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "700d6a26-3268-4c26-9128-64894ff50def")
+		(property "Reference" "J10"
+			(at 35.56 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 35.56 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 35.56 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 35.56 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8d457d32-1bd6-493e-a207-28c1774b5e41")
+		)
+		(pin "2"
+			(uuid "52c0e3d5-9af0-45ef-a3df-73337e51f2bf")
+		)
+		(instances
+			(project ""
+				(path "/e4766f3c-98ec-4040-9e57-7309e9dd2214/3c6e67a3-a459-411e-b958-c3a826ee49dc"
+					(reference "J10")
 					(unit 1)
 				)
 			)
