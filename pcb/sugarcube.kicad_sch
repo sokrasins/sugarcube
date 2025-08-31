@@ -10,6 +10,17 @@
 		(rev "1")
 	)
 	(lib_symbols)
+	(text "TX/RX swapped\n"
+		(exclude_from_sim no)
+		(at 119.888 92.964 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 0 5 255 1)
+			)
+		)
+		(uuid "4f4de092-9023-47a8-be1d-725a7c5e496a")
+	)
 	(wire
 		(pts
 			(xy 180.34 120.65) (xy 168.91 120.65)
@@ -59,6 +70,16 @@
 			(type default)
 		)
 		(uuid "0fb6b3ab-a8cc-4469-a7b1-610dc917ae76")
+	)
+	(wire
+		(pts
+			(xy 109.22 93.98) (xy 130.81 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10fccb85-efd3-4ee8-93eb-11630afff45c")
 	)
 	(wire
 		(pts
@@ -179,6 +200,16 @@
 			(type default)
 		)
 		(uuid "59ed03e2-d209-4473-a4e7-2ffc5c5f4c40")
+	)
+	(wire
+		(pts
+			(xy 109.22 96.52) (xy 130.81 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61be0fb9-b981-4380-8eef-0c3944076b80")
 	)
 	(wire
 		(pts
@@ -352,6 +383,16 @@
 	)
 	(wire
 		(pts
+			(xy 109.22 99.06) (xy 130.81 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebb23479-80a7-42d6-ac5e-c02622b794da")
+	)
+	(wire
+		(pts
 			(xy 167.64 123.19) (xy 167.64 116.84)
 		)
 		(stroke
@@ -402,7 +443,7 @@
 	)
 	(sheet
 		(at 88.9 63.5)
-		(size 20.32 35.56)
+		(size 20.32 38.1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -416,7 +457,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "15818244-8eec-47e4-be1d-19b684071a27")
-		(property "Sheetname" "power"
+		(property "Sheetname" "usb_and_power"
 			(at 88.9 62.7884 0)
 			(effects
 				(font
@@ -426,32 +467,12 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 88.9 99.6446 0)
+			(at 88.9 102.1846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left top)
-			)
-		)
-		(pin "D+" output
-			(at 109.22 93.98 0)
-			(uuid "194c1a3f-504a-4acd-ba69-fe0f7d81b5eb")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "D-" output
-			(at 109.22 96.52 0)
-			(uuid "a6c68140-1fd5-4757-bbc8-e24de1fe5029")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 		(pin "V_9151" output
@@ -527,6 +548,36 @@
 		(pin "SDA" input
 			(at 109.22 73.66 0)
 			(uuid "b035a9ad-10f7-468a-9c7e-49e15f517014")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB_SER_TX" output
+			(at 109.22 93.98 0)
+			(uuid "dbdee796-ddc1-4f12-bc87-51e70132b066")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB_SER_RX" input
+			(at 109.22 96.52 0)
+			(uuid "86e0faba-9405-4fdc-80a3-ecf84d6366e4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{USB_SUS}" output
+			(at 109.22 99.06 0)
+			(uuid "02514dc8-9255-4463-8538-2e1dfaea2638")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -819,6 +870,36 @@
 		(pin "V_9151" input
 			(at 130.81 66.04 180)
 			(uuid "43782869-ee33-4308-91aa-b5806e6f70f1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DEBUG_RX" input
+			(at 130.81 93.98 180)
+			(uuid "da9b3035-71f6-4a9e-8459-309790425943")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "DEBUG_TX" output
+			(at 130.81 96.52 180)
+			(uuid "78438af6-22d2-4ded-ab78-444a2b10ca78")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{USB_CONN}" input
+			(at 130.81 99.06 180)
+			(uuid "6ae013a7-85da-49f1-b556-7211faaaacf0")
 			(effects
 				(font
 					(size 1.27 1.27)

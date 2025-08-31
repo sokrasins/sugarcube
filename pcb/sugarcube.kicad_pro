@@ -588,25 +588,70 @@
         "wire_width": 6
       },
       {
-        "line_style": 1,
-        "name": "50 Ohm",
+        "bus_width": 12,
+        "line_style": 0,
+        "name": "HIPOW",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)"
+        "schematic_color": "rgb(255, 128, 0)",
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "line_style": 0,
+        "name": "RF_50R",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgb(128, 0, 255)",
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "line_style": 0,
+        "name": "USB_90R",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgb(0, 0, 255)",
+        "wire_width": 6
       }
     ],
     "meta": {
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "/9151/V_9151": [
+        "HIPOW"
+      ],
+      "/usb_and_power/D+": [
+        "USB_90R"
+      ],
+      "/usb_and_power/D-": [
+        "USB_90R"
+      ],
+      "/usb_and_power/VBAT": [
+        "HIPOW"
+      ],
+      "Net-(J3-Pin_1)": [
+        "HIPOW"
+      ],
+      "Net-(J9-In)": [
+        "RF_50R"
+      ],
+      "Net-(U1-VDD)": [
+        "HIPOW"
+      ],
+      "VBUS": [
+        "HIPOW"
+      ]
+    },
     "netclass_patterns": [
       {
-        "netclass": "50 Ohm",
+        "netclass": "RF_50R",
         "pattern": "/9151/ANT"
       },
       {
-        "netclass": "50 Ohm",
+        "netclass": "RF_50R",
         "pattern": "/9151/RF"
       }
     ]
@@ -733,7 +778,7 @@
     ],
     [
       "15818244-8eec-47e4-be1d-19b684071a27",
-      "power"
+      "usb_and_power"
     ],
     [
       "3c6e67a3-a459-411e-b958-c3a826ee49dc",

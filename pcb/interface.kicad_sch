@@ -2339,7 +2339,7 @@
 	)
 	(text "TODO: Change to smaller devices"
 		(exclude_from_sim no)
-		(at 228.854 88.138 0)
+		(at 226.822 35.814 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -2349,6 +2349,19 @@
 			)
 		)
 		(uuid "4f01d9af-9d2c-4a78-99ce-6e0c1ac1c73d")
+	)
+	(text "TODO: Think about current draw"
+		(exclude_from_sim no)
+		(at 84.328 27.686 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+				(thickness 0.4064)
+				(bold yes)
+				(color 255 0 255 1)
+			)
+		)
+		(uuid "61821e76-1207-4b03-a5e5-dc0600ca9e4f")
 	)
 	(text "ePaper Display"
 		(exclude_from_sim no)
@@ -2362,6 +2375,20 @@
 			)
 		)
 		(uuid "9275c0dd-aeb9-469f-9c02-519a0cda5928")
+	)
+	(text "TODO: Think about current draw\nCan these be powered from V_9151?"
+		(exclude_from_sim no)
+		(at 200.66 30.226 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+				(thickness 0.4064)
+				(bold yes)
+				(color 255 0 255 1)
+			)
+			(justify left)
+		)
+		(uuid "b8caa9d8-175e-47f5-9bc9-788413f27879")
 	)
 	(junction
 		(at 261.62 50.8)
