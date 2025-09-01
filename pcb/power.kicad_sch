@@ -1372,17 +1372,6 @@
 		)
 		(uuid "7ccbe5ae-8907-4dae-adfe-aa6527783f72")
 	)
-	(text "See product spec section 9 \nfor component selection"
-		(exclude_from_sim no)
-		(at 207.01 111.252 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 0 248 1)
-			)
-		)
-		(uuid "aa754ceb-6c4d-431c-9a0c-60849add0d90")
-	)
 	(text "VSYS - System voltage out"
 		(exclude_from_sim no)
 		(at 169.164 49.022 0)

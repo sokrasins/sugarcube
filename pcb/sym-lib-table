@@ -10,4 +10,5 @@
   (lib (name "nordic-lib-kicad-nrf52-modules")(type "KiCad")(uri "${KIPRJMOD}/kicad-common/libs/nordic-lib-kicad/symbols/nordic-lib-kicad-nrf52-modules.kicad_sym")(options "")(descr ""))
   (lib (name "nordic-lib-kicad-nrf21")(type "KiCad")(uri "${KIPRJMOD}/kicad-common/libs/nordic-lib-kicad/symbols/nordic-lib-kicad-nrf21.kicad_sym")(options "")(descr ""))
   (lib (name "nordic-lib-kicad-npm")(type "KiCad")(uri "${KIPRJMOD}/kicad-common/libs/nordic-lib-kicad/symbols/nordic-lib-kicad-npm.kicad_sym")(options "")(descr ""))
+  (lib (name "ECMF02-4CMX8")(type "KiCad")(uri "${KIPRJMOD}/kicad-common/libs/ECMF02-4CMX8/ECMF02-4CMX8.kicad_sym")(options "")(descr ""))
 )
