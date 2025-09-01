@@ -1372,6 +1372,16 @@
 		)
 		(uuid "7ccbe5ae-8907-4dae-adfe-aa6527783f72")
 	)
+	(text "Either VBUS or VBAT:\n5V, 4.2 to 3.4 V"
+		(exclude_from_sim no)
+		(at 196.088 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "aee10f5e-0076-4098-9019-4652e46382ad")
+	)
 	(text "VSYS - System voltage out"
 		(exclude_from_sim no)
 		(at 169.164 49.022 0)
@@ -1616,6 +1626,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 85.09) (xy 118.11 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e975ebe-aa7a-415e-9614-32dec0bc1ad2")
+	)
+	(wire
+		(pts
 			(xy 191.77 120.65) (xy 191.77 123.19)
 		)
 		(stroke
@@ -1693,16 +1713,6 @@
 			(type default)
 		)
 		(uuid "2bffa917-3bab-4185-ab55-28df7d98bcf5")
-	)
-	(wire
-		(pts
-			(xy 113.03 85.09) (xy 118.11 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f594b48-5d14-4fbd-9ab8-31b3c9ca75cb")
 	)
 	(wire
 		(pts
@@ -1853,16 +1863,6 @@
 			(type default)
 		)
 		(uuid "653c386c-8f76-41af-89b4-8dc31747e95a")
-	)
-	(wire
-		(pts
-			(xy 113.03 87.63) (xy 118.11 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "674ffe43-8eb8-4414-9240-3dcd64c18865")
 	)
 	(wire
 		(pts
@@ -2186,6 +2186,16 @@
 	)
 	(wire
 		(pts
+			(xy 115.57 87.63) (xy 118.11 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f42bb525-0f72-461a-98e2-346bc915fb62")
+	)
+	(wire
+		(pts
 			(xy 189.23 107.95) (xy 191.77 107.95)
 		)
 		(stroke
@@ -2234,26 +2244,6 @@
 		)
 		(uuid "ff39f295-6a08-4b28-8a66-efe03630490a")
 	)
-	(label "CC1"
-		(at 113.03 85.09 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8a028ff6-59f9-4bb8-bdf9-a6a09546962b")
-	)
-	(label "CC2"
-		(at 113.03 87.63 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a58b3706-6ac5-4f89-86ff-1e6db4416465")
-	)
 	(hierarchical_label "PMIC_INT2"
 		(shape output)
 		(at 115.57 105.41 180)
@@ -2276,7 +2266,7 @@
 		)
 		(uuid "2cce12d7-af6a-4249-80d4-63e7003bbe96")
 	)
-	(hierarchical_label "V_9151"
+	(hierarchical_label "VSYS"
 		(shape output)
 		(at 193.04 50.8 0)
 		(effects
@@ -2309,6 +2299,17 @@
 		)
 		(uuid "bf5e83bf-9261-46cc-8b2f-c125978c2baf")
 	)
+	(hierarchical_label "CC2"
+		(shape input)
+		(at 115.57 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c04f9720-2305-495b-8ff5-198e248329b1")
+	)
 	(hierarchical_label "PMIC_INT5"
 		(shape output)
 		(at 115.57 113.03 180)
@@ -2319,6 +2320,17 @@
 			(justify right)
 		)
 		(uuid "d463d557-bc10-43fe-afc8-0c507b40066f")
+	)
+	(hierarchical_label "CC1"
+		(shape input)
+		(at 115.57 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dae0d150-ba2f-4185-b518-a53434eea0f4")
 	)
 	(hierarchical_label "VBAT"
 		(shape input)
@@ -2331,7 +2343,7 @@
 		)
 		(uuid "e18040b8-500b-4d13-b344-791788cf2e0b")
 	)
-	(hierarchical_label "V_9151"
+	(hierarchical_label "VSYS"
 		(shape output)
 		(at 194.31 100.33 0)
 		(effects

@@ -4385,6 +4385,26 @@
 		(color 0 0 0 0)
 		(uuid "fba6357e-1785-43f7-9443-5aed9f730c0c")
 	)
+	(no_connect
+		(at 245.11 40.64)
+		(uuid "2f9bb6d2-43a2-436f-b5eb-a264dffb521f")
+	)
+	(no_connect
+		(at 245.11 45.72)
+		(uuid "68979c1c-38eb-4e88-9bdf-639707c121fc")
+	)
+	(no_connect
+		(at 245.11 50.8)
+		(uuid "9d4110ca-a1a9-4384-a5f4-9c7c40f0973f")
+	)
+	(no_connect
+		(at 137.16 99.06)
+		(uuid "ca84cbdf-6d2c-4490-aeda-71bb5d4801a2")
+	)
+	(no_connect
+		(at 265.43 151.13)
+		(uuid "ffd48a9f-b148-4197-a0b8-21ee8fcb918e")
+	)
 	(polyline
 		(pts
 			(xy 176.53 63.5) (xy 284.48 63.5)
@@ -4394,6 +4414,16 @@
 			(type default)
 		)
 		(uuid "014d516d-f388-4579-bcbd-6d2ae2c9cbb1")
+	)
+	(wire
+		(pts
+			(xy 44.45 99.06) (xy 71.12 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01545ab8-413a-4e79-ab47-1799967e5601")
 	)
 	(wire
 		(pts
@@ -4497,16 +4527,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 76.2) (xy 71.12 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c3650c7-9eb4-42f3-948e-410b323aff72")
-	)
-	(wire
-		(pts
 			(xy 233.68 113.03) (xy 233.68 114.3)
 		)
 		(stroke
@@ -4527,6 +4547,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 93.98) (xy 71.12 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cfcfc7e-3f36-4bdb-880c-4e26607d7194")
+	)
+	(wire
+		(pts
 			(xy 68.58 63.5) (xy 71.12 63.5)
 		)
 		(stroke
@@ -4537,13 +4567,13 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 91.44) (xy 71.12 91.44)
+			(xy 68.58 81.28) (xy 71.12 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "21553246-761e-4b6c-983f-1a8c567b9272")
+		(uuid "1ef088b7-8fee-48a9-acce-77eaea2af20c")
 	)
 	(wire
 		(pts
@@ -4574,16 +4604,6 @@
 			(type default)
 		)
 		(uuid "2cfc7c03-be65-4455-8af6-05856fe3e36f")
-	)
-	(wire
-		(pts
-			(xy 68.58 96.52) (xy 71.12 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d304c57-a74b-4d4b-a746-31c0e910d135")
 	)
 	(wire
 		(pts
@@ -4807,6 +4827,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 78.74) (xy 71.12 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "546e87c0-e4d8-448a-86f0-0ddab82ab033")
+	)
+	(wire
+		(pts
 			(xy 68.58 109.22) (xy 71.12 109.22)
 		)
 		(stroke
@@ -4987,16 +5017,6 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 99.06) (xy 71.12 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70d11f5d-0ffe-4961-90e3-3ae0329e257b")
-	)
-	(wire
-		(pts
 			(xy 68.58 66.04) (xy 71.12 66.04)
 		)
 		(stroke
@@ -5137,6 +5157,26 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 91.44) (xy 71.12 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8795a717-3e7a-42a9-91e5-3c4cdb376ccf")
+	)
+	(wire
+		(pts
+			(xy 44.45 96.52) (xy 71.12 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "887c76cd-4d6e-4949-87e0-f96d3d5f057f")
+	)
+	(wire
+		(pts
 			(xy 90.17 26.67) (xy 101.6 26.67)
 		)
 		(stroke
@@ -5227,16 +5267,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 73.66) (xy 71.12 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9d446d1c-f510-4e3e-b47a-6171d797188a")
-	)
-	(wire
-		(pts
 			(xy 201.93 105.41) (xy 223.52 105.41)
 		)
 		(stroke
@@ -5254,16 +5284,6 @@
 			(type default)
 		)
 		(uuid "a5a323d3-37ed-441c-9ba7-a1fe08892039")
-	)
-	(wire
-		(pts
-			(xy 68.58 93.98) (xy 71.12 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a69ff588-68b3-4e64-9732-ef2a95249429")
 	)
 	(wire
 		(pts
@@ -5587,6 +5607,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 73.66) (xy 71.12 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb692041-77bc-4f00-ab0c-c91aebfb873a")
+	)
+	(wire
+		(pts
 			(xy 68.58 119.38) (xy 71.12 119.38)
 		)
 		(stroke
@@ -5627,23 +5657,13 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 78.74) (xy 71.12 78.74)
+			(xy 68.58 76.2) (xy 71.12 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f235f1a5-c102-4c76-bf8d-55a4370a3134")
-	)
-	(wire
-		(pts
-			(xy 50.8 81.28) (xy 71.12 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8941809-c146-4849-b4ed-2146ae0f7315")
+		(uuid "f276895d-deaa-451e-9045-15d37f67dfe2")
 	)
 	(wire
 		(pts
@@ -5736,7 +5756,7 @@
 		(uuid "090cf5bf-8e83-4dc5-b766-d1a52508f6df")
 	)
 	(label "FLASH_SCK"
-		(at 50.8 78.74 0)
+		(at 44.45 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5766,7 +5786,7 @@
 		(uuid "1193bd8a-5ca4-4bd6-8f0f-552aa7e7510a")
 	)
 	(label "FLASH_CS"
-		(at 50.8 73.66 0)
+		(at 44.45 99.06 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5786,7 +5806,7 @@
 		(uuid "290037ed-e064-4752-afbb-f519e9af7807")
 	)
 	(label "FLASH_MOSI"
-		(at 50.8 81.28 0)
+		(at 44.45 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5886,7 +5906,7 @@
 		(uuid "9c695f9b-9d34-4b0b-8507-dd1eb56ee740")
 	)
 	(label "FLASH_MISO"
-		(at 50.8 76.2 0)
+		(at 44.45 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5947,7 +5967,7 @@
 	)
 	(hierarchical_label "PMIC_INT5"
 		(shape input)
-		(at 68.58 111.76 180)
+		(at 68.58 83.82 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5958,7 +5978,7 @@
 	)
 	(hierarchical_label "EPD_RES"
 		(shape output)
-		(at 68.58 86.36 180)
+		(at 68.58 104.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5969,7 +5989,7 @@
 	)
 	(hierarchical_label "DEBUG_RX"
 		(shape input)
-		(at 68.58 66.04 180)
+		(at 68.58 116.84 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5981,7 +6001,7 @@
 	)
 	(hierarchical_label "EPD_D{slash}C"
 		(shape output)
-		(at 68.58 88.9 180)
+		(at 68.58 106.68 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5992,7 +6012,7 @@
 	)
 	(hierarchical_label "DOCK_RX"
 		(shape input)
-		(at 68.58 129.54 180)
+		(at 68.58 121.92 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6003,7 +6023,7 @@
 	)
 	(hierarchical_label "DOCK_TX"
 		(shape output)
-		(at 68.58 127 180)
+		(at 68.58 124.46 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6025,7 +6045,7 @@
 	)
 	(hierarchical_label "TEST_PIN_3"
 		(shape output)
-		(at 68.58 119.38 180)
+		(at 68.58 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6036,7 +6056,7 @@
 	)
 	(hierarchical_label "TEST_PIN_1"
 		(shape output)
-		(at 68.58 114.3 180)
+		(at 68.58 63.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6047,7 +6067,7 @@
 	)
 	(hierarchical_label "SCL"
 		(shape output)
-		(at 68.58 68.58 180)
+		(at 68.58 129.54 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6058,7 +6078,7 @@
 	)
 	(hierarchical_label "DOCK_DET"
 		(shape input)
-		(at 68.58 124.46 180)
+		(at 68.58 88.9 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6069,7 +6089,7 @@
 	)
 	(hierarchical_label "TEST_PIN_2"
 		(shape output)
-		(at 68.58 116.84 180)
+		(at 68.58 66.04 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6080,7 +6100,7 @@
 	)
 	(hierarchical_label "~{USB_CONN}"
 		(shape input)
-		(at 68.58 93.98 180)
+		(at 68.58 86.36 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6091,7 +6111,7 @@
 	)
 	(hierarchical_label "PMIC_INT4"
 		(shape input)
-		(at 68.58 109.22 180)
+		(at 68.58 81.28 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6102,7 +6122,7 @@
 	)
 	(hierarchical_label "DEBUG_TX"
 		(shape output)
-		(at 68.58 63.5 180)
+		(at 68.58 119.38 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6114,7 +6134,7 @@
 	)
 	(hierarchical_label "EPD_BUSY"
 		(shape input)
-		(at 68.58 83.82 180)
+		(at 68.58 101.6 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6125,7 +6145,7 @@
 	)
 	(hierarchical_label "PMIC_INT3"
 		(shape input)
-		(at 68.58 106.68 180)
+		(at 68.58 78.74 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6147,7 +6167,7 @@
 	)
 	(hierarchical_label "SDA"
 		(shape bidirectional)
-		(at 68.58 71.12 180)
+		(at 68.58 127 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6169,7 +6189,7 @@
 	)
 	(hierarchical_label "TEST_PIN_4"
 		(shape output)
-		(at 68.58 121.92 180)
+		(at 68.58 71.12 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6202,7 +6222,7 @@
 	)
 	(hierarchical_label "EPD_SCK"
 		(shape output)
-		(at 68.58 96.52 180)
+		(at 68.58 111.76 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6213,7 +6233,7 @@
 	)
 	(hierarchical_label "EPD_MOSI"
 		(shape output)
-		(at 68.58 99.06 180)
+		(at 68.58 109.22 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6224,7 +6244,7 @@
 	)
 	(hierarchical_label "EPD_CS"
 		(shape output)
-		(at 68.58 91.44 180)
+		(at 68.58 114.3 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6235,7 +6255,7 @@
 	)
 	(hierarchical_label "PMIC_INT1"
 		(shape input)
-		(at 68.58 101.6 180)
+		(at 68.58 73.66 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6268,7 +6288,7 @@
 	)
 	(hierarchical_label "PMIC_INT2"
 		(shape input)
-		(at 68.58 104.14 180)
+		(at 68.58 76.2 180)
 		(effects
 			(font
 				(size 1.27 1.27)
