@@ -5415,7 +5415,7 @@
 		(uuid "ae731490-7928-4c8b-8b63-ed49b52b21e1")
 	)
 	(hierarchical_label "SDA"
-		(shape output)
+		(shape bidirectional)
 		(at 68.58 71.12 180)
 		(effects
 			(font

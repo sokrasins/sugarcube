@@ -623,6 +623,18 @@
       "/9151/V_9151": [
         "HIPOW"
       ],
+      "/Battery/VBAT": [
+        "HIPOW"
+      ],
+      "/USB/D+": [
+        "USB_90R"
+      ],
+      "/USB/D-": [
+        "USB_90R"
+      ],
+      "/nRF9151/V_9151": [
+        "HIPOW"
+      ],
       "/usb_and_power/D+": [
         "USB_90R"
       ],
@@ -777,20 +789,28 @@
       "Root"
     ],
     [
+      "8e4bf713-3294-45ac-bfd2-f12aca02033f",
+      "USB"
+    ],
+    [
+      "2df4e388-5acf-4139-9db2-29124c0f81b1",
+      "Battery"
+    ],
+    [
       "15818244-8eec-47e4-be1d-19b684071a27",
-      "usb_and_power"
+      "PMIC"
     ],
     [
       "3c6e67a3-a459-411e-b958-c3a826ee49dc",
-      "9151"
+      "nRF9151"
     ],
     [
       "a2e95dd8-7383-4d50-9b23-5411179090ab",
-      "interface"
+      "Interface"
     ],
     [
       "4a8f9fb1-7593-41c3-ad8b-5bdf75a57c5b",
-      "headers"
+      "Headers"
     ]
   ],
   "text_variables": {}
