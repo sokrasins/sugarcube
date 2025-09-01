@@ -272,16 +272,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 90.17) (xy 205.74 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "46c4a357-dfc8-43cc-87fe-dca6cb5c5387")
-	)
-	(wire
-		(pts
 			(xy 97.79 95.25) (xy 104.14 95.25)
 		)
 		(stroke
@@ -299,16 +289,6 @@
 			(type default)
 		)
 		(uuid "4e232469-d362-45db-8edd-9d9c2fe8a5b8")
-	)
-	(wire
-		(pts
-			(xy 182.88 85.09) (xy 205.74 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "522bb1ed-2a79-46d3-b9a6-688491c13967")
 	)
 	(wire
 		(pts
@@ -410,7 +390,7 @@
 		)
 		(uuid "877b54d8-9658-4e9a-b584-a44ce5a24288")
 	)
-	(wire
+	(bus
 		(pts
 			(xy 182.88 87.63) (xy 205.74 87.63)
 		)
@@ -418,17 +398,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9577a5f1-6969-4f67-b351-3a5800f44ded")
-	)
-	(wire
-		(pts
-			(xy 182.88 82.55) (xy 205.74 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97c7ffe0-9f3f-49fa-9e70-79e5fcb915f7")
+		(uuid "8b147f2b-4590-4705-b65a-969e4ce6744a")
 	)
 	(wire
 		(pts
@@ -502,16 +472,6 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 95.25) (xy 205.74 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c87e3b62-89e7-4de6-88ff-22081208dae2")
-	)
-	(wire
-		(pts
 			(xy 132.08 72.39) (xy 143.51 72.39)
 		)
 		(stroke
@@ -579,16 +539,6 @@
 			(type default)
 		)
 		(uuid "e7230dd0-c2cd-46c3-aaa5-04bf45376e1b")
-	)
-	(wire
-		(pts
-			(xy 182.88 92.71) (xy 205.74 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ebedd7f1-c7ed-4d8d-a0f4-4ddbf5bb1ad4")
 	)
 	(wire
 		(pts
@@ -978,66 +928,6 @@
 				(justify right)
 			)
 		)
-		(pin "EPD_BUSY" input
-			(at 182.88 82.55 0)
-			(uuid "60ae4602-a680-4a8e-85c8-f2ff8a9fc46d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "EPD_CS" output
-			(at 182.88 85.09 0)
-			(uuid "b46f9fe1-b9ed-4ac0-86c3-cb7d0ee7f58b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "EPD_D{slash}C" output
-			(at 182.88 87.63 0)
-			(uuid "dfee266e-788d-4eeb-980b-42a98b6da3d4")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "EPD_MOSI" output
-			(at 182.88 90.17 0)
-			(uuid "e548bafd-270b-4250-bfcf-2424705f3959")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "EPD_RES" output
-			(at 182.88 92.71 0)
-			(uuid "4c2cc8ed-a1da-400e-b90e-6c3841c73666")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "EPD_SCK" output
-			(at 182.88 95.25 0)
-			(uuid "25044cb0-2e13-46e1-b781-f0b53ecbf8fa")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "PMIC_INT1" input
 			(at 154.94 85.09 180)
 			(uuid "95f72a7c-949b-4373-9c9d-1e5a5bc8c986")
@@ -1196,6 +1086,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "{EPAPER}" bidirectional
+			(at 182.88 87.63 0)
+			(uuid "8d88b11e-fed8-4f5a-9274-953f284fa34f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
@@ -1484,66 +1384,6 @@
 				(justify left)
 			)
 		)
-		(pin "EPD_BUSY" output
-			(at 205.74 82.55 180)
-			(uuid "933cccce-ca5d-4151-81b6-98d4baba5941")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "EPD_CS" input
-			(at 205.74 85.09 180)
-			(uuid "0b1dec9e-d1e4-4723-9b55-297d17329d55")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "EPD_D{slash}C" input
-			(at 205.74 87.63 180)
-			(uuid "73f5f9f2-7faf-4a65-82b1-847399af247e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "EPD_MOSI" input
-			(at 205.74 90.17 180)
-			(uuid "ed4f31eb-da8c-42ae-ba0d-8ec690cd164f")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "EPD_RES" input
-			(at 205.74 92.71 180)
-			(uuid "df5921dd-8ad4-4e73-b258-9bc8361546f4")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "EPD_SCK" input
-			(at 205.74 95.25 180)
-			(uuid "af225fa5-7d05-4c44-a241-8c0fb6d6cc5a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "RGB_LED" input
 			(at 205.74 100.33 180)
 			(uuid "b0ef7ac8-ac2d-4453-94e4-2972c5fa582e")
@@ -1557,6 +1397,16 @@
 		(pin "VSYS" input
 			(at 205.74 69.85 180)
 			(uuid "93b2a692-5bc7-424a-97ea-eed39c2be9c2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{EPAPER}" bidirectional
+			(at 205.74 87.63 180)
+			(uuid "a1e47837-feca-4387-bd3e-80b3357c4d89")
 			(effects
 				(font
 					(size 1.27 1.27)
