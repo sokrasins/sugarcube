@@ -4362,16 +4362,16 @@
 		(uuid "a90e6ab7-d01d-4437-9429-2801ad292081")
 	)
 	(junction
-		(at 241.3 48.26)
+		(at 242.57 48.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ad99c40b-119a-4047-abe8-5e9bf73111bf")
 	)
 	(junction
-		(at 217.17 22.86)
+		(at 213.36 22.86)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d40da5f6-59d2-45df-9436-6845d9231a65")
+		(uuid "e6d9c56f-a0a3-4fa9-9def-4d1a7f03e649")
 	)
 	(junction
 		(at 233.68 81.28)
@@ -4404,16 +4404,6 @@
 			(type default)
 		)
 		(uuid "01dab14c-975b-4c9f-8d66-af1cfd1d3b80")
-	)
-	(wire
-		(pts
-			(xy 237.49 38.1) (xy 240.03 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "022fbc2a-591f-4aa0-ad2c-de12f2525211")
 	)
 	(wire
 		(pts
@@ -4637,7 +4627,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 22.86) (xy 241.3 30.48)
+			(xy 242.57 22.86) (xy 242.57 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4677,7 +4667,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 33.02) (xy 196.85 33.02)
+			(xy 184.15 33.02) (xy 193.04 33.02)
 		)
 		(stroke
 			(width 0)
@@ -4717,13 +4707,23 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 30.48) (xy 241.3 30.48)
+			(xy 245.11 30.48) (xy 242.57 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "43dab65f-61bc-489b-b1e4-d42739c99114")
+	)
+	(wire
+		(pts
+			(xy 238.76 43.18) (xy 245.11 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "443616fa-2d0f-4a49-9126-6aa6ef189879")
 	)
 	(wire
 		(pts
@@ -4897,7 +4897,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 35.56) (xy 196.85 35.56)
+			(xy 184.15 35.56) (xy 193.04 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4907,7 +4907,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 48.26) (xy 241.3 53.34)
+			(xy 242.57 48.26) (xy 242.57 53.34)
 		)
 		(stroke
 			(width 0)
@@ -4967,7 +4967,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 25.4) (xy 217.17 22.86)
+			(xy 213.36 25.4) (xy 213.36 22.86)
 		)
 		(stroke
 			(width 0)
@@ -5014,6 +5014,16 @@
 			(type default)
 		)
 		(uuid "73d59e44-da74-4dad-bf2e-91ba23417178")
+	)
+	(wire
+		(pts
+			(xy 233.68 35.56) (xy 245.11 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "744091cc-4055-4d6d-9a8f-b2b2a5e211e6")
 	)
 	(wire
 		(pts
@@ -5104,16 +5114,6 @@
 			(type default)
 		)
 		(uuid "811169b7-fde6-40c6-9a14-4e42da353dcd")
-	)
-	(wire
-		(pts
-			(xy 240.03 43.18) (xy 243.84 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "812d92b4-f27b-42d2-b8d0-62a1ad5bd8bf")
 	)
 	(wire
 		(pts
@@ -5247,7 +5247,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 22.86) (xy 217.17 22.86)
+			(xy 204.47 22.86) (xy 213.36 22.86)
 		)
 		(stroke
 			(width 0)
@@ -5277,17 +5277,7 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 33.02) (xy 243.84 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ac80de72-5376-4c71-8380-09f481474cde")
-	)
-	(wire
-		(pts
-			(xy 217.17 45.72) (xy 217.17 48.26)
+			(xy 213.36 45.72) (xy 213.36 48.26)
 		)
 		(stroke
 			(width 0)
@@ -5317,7 +5307,7 @@
 	)
 	(wire
 		(pts
-			(xy 243.84 38.1) (xy 241.3 38.1)
+			(xy 245.11 38.1) (xy 242.57 38.1)
 		)
 		(stroke
 			(width 0)
@@ -5347,13 +5337,33 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 38.1) (xy 241.3 48.26)
+			(xy 233.68 38.1) (xy 238.76 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8806b6d-ba05-4ddb-9da1-8c2074259f54")
+	)
+	(wire
+		(pts
+			(xy 242.57 38.1) (xy 242.57 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b9d8bf86-1336-4446-a908-1ec66bd5a25a")
+	)
+	(wire
+		(pts
+			(xy 213.36 22.86) (xy 242.57 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba2e5e3c-7962-423f-8443-2fcff8299a68")
 	)
 	(wire
 		(pts
@@ -5417,7 +5427,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 38.1) (xy 240.03 43.18)
+			(xy 238.76 38.1) (xy 238.76 43.18)
 		)
 		(stroke
 			(width 0)
@@ -5427,7 +5437,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 48.26) (xy 243.84 48.26)
+			(xy 242.57 48.26) (xy 245.11 48.26)
 		)
 		(stroke
 			(width 0)
@@ -5454,16 +5464,6 @@
 			(type default)
 		)
 		(uuid "ce2e2bb7-a9ac-42dc-8bf7-c7ed8b3ceb6f")
-	)
-	(wire
-		(pts
-			(xy 217.17 22.86) (xy 241.3 22.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cefa8ef5-af2e-46d4-927e-772317318a3c")
 	)
 	(polyline
 		(pts
@@ -5517,6 +5517,16 @@
 	)
 	(wire
 		(pts
+			(xy 233.68 33.02) (xy 245.11 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc3bb446-0078-4f07-b7f1-8d0ea8eed715")
+	)
+	(wire
+		(pts
 			(xy 74.93 26.67) (xy 90.17 26.67)
 		)
 		(stroke
@@ -5557,7 +5567,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 38.1) (xy 196.85 38.1)
+			(xy 184.15 38.1) (xy 193.04 38.1)
 		)
 		(stroke
 			(width 0)
@@ -5687,16 +5697,6 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 35.56) (xy 243.84 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe2668b7-b470-4fce-aa35-630a392c94b4")
-	)
-	(wire
-		(pts
 			(xy 255.27 133.35) (xy 262.89 133.35)
 		)
 		(stroke
@@ -5716,7 +5716,7 @@
 		(uuid "ff9f0c17-e18b-440c-bce9-c151d566a1c3")
 	)
 	(label "SIM_1V8"
-		(at 208.28 22.86 0)
+		(at 204.47 22.86 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5756,7 +5756,7 @@
 		(uuid "1121ff04-48b4-4831-82bd-b938c9dbdaf2")
 	)
 	(label "SIM_RST"
-		(at 187.96 33.02 0)
+		(at 184.15 33.02 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5876,7 +5876,7 @@
 		(uuid "9bd0cdd5-49af-4772-a898-0c163f56fbc2")
 	)
 	(label "SIM_IO"
-		(at 187.96 38.1 0)
+		(at 184.15 38.1 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5896,7 +5896,7 @@
 		(uuid "a887f3d6-684d-44af-a524-a42cf2ee2dc9")
 	)
 	(label "SIM_CLK"
-		(at 187.96 35.56 0)
+		(at 184.15 35.56 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6773,7 +6773,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 217.17 48.26 0)
+		(at 213.36 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6782,7 +6782,7 @@
 		(fields_autoplaced yes)
 		(uuid "10120ad9-2701-465e-997b-6bbd93389532")
 		(property "Reference" "#PWR016"
-			(at 217.17 54.61 0)
+			(at 213.36 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6791,7 +6791,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 217.17 53.34 0)
+			(at 213.36 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6799,7 +6799,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 217.17 48.26 0)
+			(at 213.36 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6808,7 +6808,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 217.17 48.26 0)
+			(at 213.36 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6817,7 +6817,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 217.17 48.26 0)
+			(at 213.36 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8195,7 +8195,7 @@
 	)
 	(symbol
 		(lib_id "Connector:JAE_SIM_Card_SF72S006")
-		(at 243.84 40.64 0)
+		(at 245.11 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8203,7 +8203,7 @@
 		(dnp no)
 		(uuid "7f682e76-6b94-4cf8-a36e-7c5b36939841")
 		(property "Reference" "J10"
-			(at 247.65 24.892 0)
+			(at 248.92 24.892 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8212,7 +8212,7 @@
 			)
 		)
 		(property "Value" "JAE_SIM_Card_SF72S006"
-			(at 247.65 27.432 0)
+			(at 248.92 27.432 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8221,7 +8221,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JAE:JAE_SIM_Card_SF72S006"
-			(at 255.27 54.61 0)
+			(at 256.54 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8230,7 +8230,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.jae.com/direct/topics/topics_file_download/topics_id=68892&ext_no=06&index=0&_lang=en&v=202003111511468456809"
-			(at 257.81 40.64 0)
+			(at 259.08 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8239,7 +8239,7 @@
 			)
 		)
 		(property "Description" "Nano-SIM Card (4FF) connector with Detect Switch"
-			(at 243.84 40.64 0)
+			(at 245.11 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8285,7 +8285,7 @@
 	)
 	(symbol
 		(lib_id "Power_Protection:TPD3F303DPV")
-		(at 217.17 35.56 0)
+		(at 213.36 35.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8294,7 +8294,7 @@
 		(fields_autoplaced yes)
 		(uuid "7ffa1ddf-fa4c-496f-9128-bb00bdf84165")
 		(property "Reference" "U4"
-			(at 219.3133 22.86 0)
+			(at 215.5033 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8303,7 +8303,7 @@
 			)
 		)
 		(property "Value" "TPD3F303DPV"
-			(at 219.3133 25.4 0)
+			(at 215.5033 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8312,7 +8312,7 @@
 			)
 		)
 		(property "Footprint" "Package_SON:Texas_R-PUSON-N8_USON-8-1EP_1.6x2.1mm_P0.5mm_EP0.4x1.7mm"
-			(at 215.9 45.72 0)
+			(at 212.09 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8321,7 +8321,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/gpn/tpd3f303"
-			(at 220.98 48.26 0)
+			(at 217.17 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8330,7 +8330,7 @@
 			)
 		)
 		(property "Description" "3 channel EMI filters with integrated ESD protection for SIM Card Interface, USON-8"
-			(at 217.17 35.56 0)
+			(at 213.36 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8780,7 +8780,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 241.3 53.34 0)
+		(at 242.57 53.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8789,7 +8789,7 @@
 		(fields_autoplaced yes)
 		(uuid "98dbeabd-ed7e-458b-a386-fdba1bf7f943")
 		(property "Reference" "#PWR088"
-			(at 241.3 59.69 0)
+			(at 242.57 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8798,7 +8798,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 241.3 58.42 0)
+			(at 242.57 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8806,7 +8806,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 241.3 53.34 0)
+			(at 242.57 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8815,7 +8815,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 53.34 0)
+			(at 242.57 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8824,7 +8824,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 241.3 53.34 0)
+			(at 242.57 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
