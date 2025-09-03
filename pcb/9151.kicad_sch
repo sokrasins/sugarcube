@@ -4529,6 +4529,16 @@
 		)
 		(uuid "0921a9a3-a9c5-48a6-b511-448ead4004fb")
 	)
+	(bus
+		(pts
+			(xy 36.83 111.76) (xy 36.83 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09812886-8e39-4b29-8b6f-d70a5ed1011b")
+	)
 	(wire
 		(pts
 			(xy 58.42 27.94) (xy 58.42 26.67)
